@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規顧客アカウントの作成|wacom</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/01.css">
+</head>
+<body>
+    <header>
+        <p><a href="#"><img src="images/wacom_logo.png" alt="wacom"></a></p>
+        <!-- ハンバーガーメニュー部分 -->
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="menu-button">
+                <span></span>
+                <span class="sr-only">メニューを開く</span>
+        </label>
+        <nav id="drawer">
+            <ul>
+                <li><a href="#">ペンタブレット</a></li>
+                <li><a href="#">アクセサリー</a></li>
+                <li><a href="#">ヘルプ</a></li>
+                <li><a href="#">アカウント</a></li>
+                <li><a href="#">カート</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>新規顧客アカウントを作成</h1>
+            <section id="sns">
+                <h2>ソーシャルメディアアカウントで作成</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Google</a></li>
+                </ul>
+            </section>
+            <section id="account_form">
+                <h2>またはメールアドレスから作成</h2>
+                <form action="#" method="post">
+                    <label for="mail">メールアドレス</label>
+                    <input type="email" id="mail" placeholder="メールアドレス" name="mail">
+                    <label for="pass">パスワード</label>
+                    <input type="password" id="pass" placeholder="パスワード" name="pass">
+                    <label for="pass2">パスワードの再入力</label>
+                    <input type="password" id="pass2" placeholder="パスワードの再入力" name="pass2">
+                    <label for="mei">名</label>
+                    <input type="text" id="mei" placeholder="名" name="mei">
+                    <label for="sei">姓</label>
+                    <input type="text" id="sei" placeholder="姓" name="sei">
+                    <label for="lang">表示する言語</label>
+                    <select name="langage" id="lang">
+                        <option value="no">表示する言語</option>
+                        <option value="japanese">日本語</option>
+                        <option value="english">English</option>
+                    </select>
+                    <div>
+                        <label><input type="checkbox" name="agree1" value="OK" checked> WACOMのプライバシーポリシーとクッキーポリシーに同意する</label>
+                        <label><input type="checkbox" name="agree2" value="OK"> WACOMの利用規約に同意する</label>
+                        <label><input type="checkbox" name="agree3" value="OK"> ニュース、製品アップデート、イベント、プロモーションなどの情報が記載されたワコムおよびその子会社からの電子メールの送付を希望します<br>
+                            （登録解除はいつでも可能です）</label>
+                    </div>
+                    <input type="submit" value="アカウント作成">
+                </form>
+            </section>
+        </div>
+        <section id="merit">
+            <h2>Wacom IDを作成いただくと、多くのメリットがあります。</h2>
+            <ul>
+                <li><img src="images/bg_1.png" alt="ポイントプレゼント"><br>500Pプレゼント<br>※ 初回登録時のみ</li>
+                <li><img src="images/bg_2.png" alt="ポイント貯まる"><br>ポイントが貯まる</li>
+                <li><img src="images/bg_3.png" alt="保証延長"><br>製品保証を延長</li>
+                <li><img src="images/bg_4.png" alt="割引クーポン"><br>割引クーポン</li>
+                <li><img src="images/bg_5.png" alt="会員限定セール"><br>会員限定セール</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p><small>&copy; wacom</small></p>
+    </footer>
+</body>
+</html>

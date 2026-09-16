@@ -1,0 +1,104 @@
+/* ハンバーガーボタン */
+#menu-button{
+    display: grid;
+    place-items: center;
+    width: 42px;
+    aspect-ratio: 1/1;
+    /* border: 1px solid #333; */
+    border-radius: 6px;
+    background-color: #ccc;
+    padding: 8px;
+    cursor: pointer;
+    position: fixed;
+    top: 22px;
+    right: 32px;
+    z-index: 100;
+
+    span,
+    span::after,
+    span::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 70%;
+        height:3px;
+        background-color: #666;
+        transition: all 0.5s;
+    }
+    span::before{
+        top: -10px;
+        width: 100%;
+    }
+    span::after {
+        bottom: -10px;
+        width: 100%;
+    }
+    /* スクリーンリーダー用 */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+}
+/* ボタンのアニメーション */
+input[type="checkbox"]:checked + #menu-button span {
+    background-color: transparent;
+}
+input[type="checkbox"]:checked + #menu-button span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+input[type="checkbox"]:checked + #menu-button span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* チェックボックスは非表示 */
+#toggle {
+    display: none;
+}
+
+/* ドロワーメニューのスタイル */
+#drawer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 32px ;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+
+    li {
+        padding: 1em;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 1em;
+    }
+    a {
+        color: #fff;
+        font-size: 1.4rem;
+    }
+}
+
+/* ボタンを押してドロワーを表示 */
+#toggle:checked + #menu-button + #drawer {
+    transform: translateX(0);
+}
+
+
+/* 768px以上（タブレット・PC）の画面幅の時 */
+@media (min-width: 768px) {
+    /* ハンバーガーボタン */
+    #menu-button {
+        display: none;
+    }
+    
+}
